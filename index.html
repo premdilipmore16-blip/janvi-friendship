@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171523">
+<title>A Little Plan, Just for Us | Janvi</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--ink:#171523;--ink2:#211d30;--rose:#dca8bc;--rose2:#f0cbd8;--cream:#f7eeeb;--lav:#b9a5d5;--muted:#b8adbd;--line:rgba(255,255,255,.13);--glass:rgba(255,255,255,.07);--shadow:0 24px 80px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}.ambient{position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 15% 10%,rgba(185,165,213,.18),transparent 38%),radial-gradient(ellipse at 85% 75%,rgba(220,168,188,.13),transparent 38%),linear-gradient(135deg,#171523,#201a2b 55%,#171523)}.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}.petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.petal{position:absolute;top:-40px;width:12px;height:18px;border-radius:90% 0 90% 0;background:linear-gradient(135deg,#f4d6e1,#bd8eaa);opacity:.35;animation:fall linear infinite}@keyframes fall{to{transform:translate3d(80px,110vh,0) rotate(540deg)}}.wrap{width:min(1120px,calc(100% - 40px));margin:auto;position:relative;z-index:1}.topbar{display:flex;align-items:center;justify-content:space-between;padding:25px 0}.brand{letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:#dfc5d3}.brand span{color:var(--rose)}.top-actions{display:flex;gap:10px;align-items:center}.pill{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--cream);padding:10px 14px;border-radius:999px;font-size:12px}.pill:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}.hero{min-height:calc(100svh - 80px);display:grid;place-items:center;text-align:center;padding:55px 0 90px}.eyebrow{color:var(--rose);text-transform:uppercase;letter-spacing:.3em;font-size:10px;font-weight:700}.hero h1{font:500 clamp(48px,8vw,92px)/1.04 'Playfair Display',serif;max-width:900px;margin:24px auto 18px;letter-spacing:-.04em}.hero h1 em{color:var(--rose2);font-weight:500}.hero p{max-width:530px;margin:0 auto;color:#c9bdcc;line-height:1.8;font-size:15px}.hero-mark{width:84px;height:84px;border:1px solid rgba(220,168,188,.42);border-radius:50%;display:grid;place-items:center;margin:0 auto 30px;box-shadow:0 0 60px rgba(220,168,188,.13);font-size:27px;color:var(--rose2)}.btn{border:0;border-radius:999px;padding:15px 24px;background:linear-gradient(110deg,#e5b9c9,#c8b1df);color:#211b2c;font-weight:700;box-shadow:0 12px 35px rgba(220,168,188,.18);transition:.2s}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--cream);box-shadow:none}.hero .btn{margin-top:32px}.tiny{font-size:11px;color:#9f93a6;margin-top:16px}.section{padding:85px 0}.hidden{display:none!important}.section-head{text-align:center;margin-bottom:36px}.section-head h2{font:500 clamp(34px,5vw,54px)/1.12 'Playfair Display',serif;margin:12px 0}.section-head p{color:var(--muted);line-height:1.7}.letter{max-width:760px;margin:auto;padding:clamp(25px,5vw,52px);border:1px solid rgba(220,168,188,.25);border-radius:26px;background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:var(--shadow);text-align:center}.letter .script{font:italic 500 28px 'Playfair Display';color:var(--rose2)}.letter p{line-height:1.9;color:#d1c5d3}.planner{max-width:850px;margin:auto;border:1px solid rgba(220,168,188,.22);border-radius:28px;padding:clamp(20px,4vw,38px);background:rgba(255,255,255,.055);box-shadow:var(--shadow);backdrop-filter:blur(16px)}.steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}.step-dot{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#a99eaf;font-size:11px}.step-dot.active{background:rgba(220,168,188,.16);border-color:rgba(220,168,188,.55);color:#f3d9e4}.form-step h3{font:500 30px 'Playfair Display';margin:0 0 8px}.hint{color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 25px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#e4d5e0}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.16);background:rgba(14,12,23,.55);color:var(--cream);padding:14px 15px;border-radius:13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--rose)}.field select option{background:#211d30}.field textarea{min-height:100px;resize:vertical}.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.choice{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:17px;border-radius:16px;color:var(--cream);text-align:left;transition:.2s}.choice strong{display:block;font-size:14px;margin-bottom:5px}.choice small{color:var(--muted);line-height:1.5}.choice.selected{border-color:var(--rose);background:rgba(220,168,188,.13)}.form-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}.summary{border:1px solid var(--line);border-radius:18px;padding:20px;background:rgba(0,0,0,.13);line-height:1.8;color:#d9cbd8}.summary b{color:var(--rose2)}.notice{font-size:12px;color:#c8b8c9;line-height:1.6;margin-top:18px}.footer{padding:45px 0 35px;text-align:center;color:#96899e;font-size:11px;letter-spacing:.08em}.footer .heart{color:var(--rose)}.modal{position:fixed;inset:0;background:rgba(9,8,14,.78);display:grid;place-items:center;padding:20px;z-index:10}.modal-card{width:min(460px,100%);padding:28px;border:1px solid var(--line);border-radius:22px;background:#211d30;box-shadow:var(--shadow)}.modal-card h3{font:500 28px 'Playfair Display';margin-top:0}.admin-list{display:grid;gap:12px;margin-top:20px}.modal{overflow-y:auto;align-items:center}
+.modal-card{width:min(760px,100%);max-height:min(90vh,920px);overflow-y:auto}
+.admin-list{gap:16px}
+.plan-card{border:1px solid rgba(220,168,188,.28);border-radius:20px;padding:clamp(16px,3vw,24px);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:0 12px 32px rgba(0,0,0,.16)}
+.plan-card h4{margin:5px 0 0;color:var(--rose2);font:500 25px 'Playfair Display',serif}
+.plan-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.plan-kicker{font-size:9px;letter-spacing:.22em;color:var(--rose);font-weight:700}
+.plan-badge{font-size:9px;letter-spacing:.1em;border:1px solid rgba(220,168,188,.28);border-radius:999px;padding:7px 10px;color:#efd4df;white-space:nowrap}
+.plan-sub{font-size:11px;color:var(--muted);margin-top:5px}
+.plan-meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.plan-chip{border:1px solid var(--line);background:rgba(10,9,16,.2);border-radius:999px;padding:8px 11px;font-size:11px;color:#e5d8e2}
+.plan-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.plan-detail{min-width:0;border:1px solid rgba(255,255,255,.09);border-radius:13px;background:rgba(10,9,16,.22);padding:12px 13px}
+.plan-detail.full{grid-column:1/-1}
+.plan-detail label{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#c7aabd;margin-bottom:7px}
+.plan-detail strong{display:block;font-size:13px;line-height:1.55;color:#f6edf1;font-weight:500;overflow-wrap:anywhere;white-space:pre-wrap}
+.plan-note{margin-top:12px;border-left:2px solid var(--rose);padding:10px 13px;background:rgba(220,168,188,.07);border-radius:0 12px 12px 0}
+.plan-note label{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#d7afc0;margin-bottom:6px}
+.plan-note p{margin:0;font-size:13px;line-height:1.65;color:#eee0e8;white-space:pre-wrap;overflow-wrap:anywhere}
+.plan-submitted{font-size:10px;color:#9e92a5;margin-top:13px}
+.plan-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08)}
+.delete-plan-btn{appearance:none;border:1px solid rgba(219,132,145,.38);background:rgba(116,42,58,.16);color:#f0bac3;border-radius:999px;padding:10px 15px;font:600 11px inherit;letter-spacing:.03em;cursor:pointer;transition:background .2s,border-color .2s}
+.delete-plan-btn:hover{background:rgba(142,55,72,.28);border-color:rgba(219,132,145,.7)}
+.delete-plan-btn:disabled{opacity:.55;cursor:wait}
+
+.status{font-size:12px;color:#e1cbd8;line-height:1.6}
+@media(max-width:520px){.modal{padding:12px}.modal-card{padding:20px 16px;border-radius:20px}.plan-card-head{gap:8px}.plan-card h4{font-size:22px}.plan-badge{font-size:8px;padding:6px 8px}.plan-details{gap:8px}.plan-detail{padding:11px}.plan-detail strong{font-size:12px}}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#f1d5e0;color:#241d2b;padding:13px 18px;border-radius:999px;font-size:13px;font-weight:700;z-index:20;box-shadow:var(--shadow);max-width:calc(100% - 30px);text-align:center}.music-note{font-size:10px;color:#a99eaf}.admin-tools{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+@media(max-width:650px){.wrap{width:min(100% - 28px,1120px)}.topbar{padding:18px 0}.hero{min-height:calc(90svh - 60px);padding:50px 0 70px}.grid{grid-template-columns:1fr}.choice-grid{grid-template-columns:1fr}.section{padding:62px 0}.brand{font-size:9px}.pill{padding:9px 11px}.form-nav .btn{padding:13px 18px}.hero h1{font-size:clamp(47px,13vw,70px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="ambient"></div><div class="grain"></div><div class="petals" id="petals"></div>
+<header class="wrap topbar">
+  <div class="brand">A LITTLE SOMETHING <span>✦</span> FOR JANVI</div>
+  <div class="top-actions">
+    <button class="pill" id="musicBtn" type="button">♫ Play lofi</button>
+    <button class="pill" id="adminBtn" type="button">Admin</button>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero" id="home">
+  <div>
+    <div class="field" style="max-width:240px;margin:0 auto 24px;text-align:left">
+      <label for="languageSelect" data-en="Choose your language" data-hi="Apni language choose karo" data-mr="Tula havi ti language nivad">Choose your language</label>
+      <select id="languageSelect" aria-label="Choose website language">
+        <option value="en">English</option>
+        <option value="hi">Hinglish</option>
+        <option value="mr">MarathiEnglish</option>
+      </select>
+    </div>
+    <div class="hero-mark">✿</div>
+    <div class="eyebrow">A small surprise is waiting</div>
+    <h1>A Little Plan,<br><em>Just for Us.</em></h1>
+    <p>Hey, Janvi. Someone has been quietly planning a little adventure. No big clues just yet... only one question.</p>
+    <button class="btn" id="discoverBtn">Discover your surprise <span>↗</span></button>
+    <div class="tiny">Take your time. This little corner is yours.</div>
+  </div>
+</section>
+
+<section class="section wrap hidden" id="reveal">
+  <div class="letter">
+    <div class="eyebrow">A note for you</div>
+    <div class="script">Dear Janvi,</div>
+    <p>Some of the best memories begin with a simple idea: let's go somewhere, try something new, and make an ordinary day feel a little special.</p>
+    <p>So here's a tiny plan-making corner, made to help us choose a day, pick an adventure, and figure out the little details together.</p>
+    <p class="script">Shall we plan something nice?</p>
+    <button class="btn" id="startPlan">Let's plan our day ♡</button>
+  </div>
+</section>
+
+<section class="section wrap hidden" id="plannerSection">
+  <div class="section-head">
+    <div class="eyebrow">The fun part begins</div>
+    <h2>Let's make a day of it.</h2>
+    <p>Choose what sounds lovely. Nothing is final until we talk it through.</p>
+  </div>
+  <div class="planner">
+    <div class="steps" id="stepDots">
+      <span class="step-dot active">01 · The day</span><span class="step-dot">02 · The vibe</span><span class="step-dot">03 · The details</span><span class="step-dot">04 · The note</span>
+    </div>
+    <form id="planForm">
+      <div class="form-step" data-step="0">
+        <h3>When shall we escape the routine?</h3><p class="hint">Pick a date and the time that feels right. We can always adjust later.</p>
+        <div class="grid">
+          <div class="field"><label for="date">Preferred date *</label><input id="date" type="date" required></div>
+          <div class="field"><label for="time">Preferred time *</label><input id="time" type="time" required></div>
+          <div class="field full"><label for="availability">How flexible is your date?</label><select id="availability"><option>That date works best</option><option>I'm flexible by a day or two</option><option>Any weekend works</option><option>Let's decide together</option></select></div>
+        </div>
+      </div>
+      <div class="form-step hidden" data-step="1">
+        <h3>Pick the kind of adventure.</h3><p class="hint">Choose the activity that makes you smile. You can add your own idea too.</p>
+        <div class="choice-grid" id="activityChoices">
+          <button type="button" class="choice selected" data-value="Movie"><strong>🎬 Movie date</strong><small>Pick a film, grab popcorn, enjoy.</small></button>
+          <button type="button" class="choice" data-value="Cafe"><strong>☕ Café hopping</strong><small>Good coffee and long conversations.</small></button>
+          <button type="button" class="choice" data-value="Shopping"><strong>🛍️ Shopping</strong><small>Browse, explore, and discover.</small></button>
+          <button type="button" class="choice" data-value="Explore"><strong>🌿 Explore somewhere</strong><small>A little walk and a new place.</small></button>
+          <button type="button" class="choice" data-value="Food outing"><strong>🍰 Food adventure</strong><small>Let's find something delicious.</small></button>
+          <button type="button" class="choice" data-value="Custom idea"><strong>✨ Something else</strong><small>Your idea gets the spotlight.</small></button>
+        </div>
+        <div class="grid" style="margin-top:18px">
+          <div class="field"><label for="movie">Movie / genre (if relevant)</label><input id="movie" maxlength="100" placeholder="e.g. comedy, a specific movie"></div>
+          <div class="field"><label for="food">Food or snack preference</label><input id="food" maxlength="120" placeholder="e.g. pizza, dessert, anything"></div>
+        </div>
+      </div>
+      <div class="form-step hidden" data-step="2">
+        <h3>Let's sort the little details.</h3><p class="hint">Share a location idea, pickup preference, and a comfortable budget. These are suggestions, not commitments.</p>
+        <div class="grid">
+          <div class="field"><label for="place" data-en="Destination / outing place *" data-hi="Kahan ghoomne jaana hai? *" data-mr="Kuthe phirayla jaycha aahe? *">Destination / outing place *</label><input id="place" maxlength="200" required placeholder="Where would you like to go?"></div>
+          <div class="field"><label for="meeting" data-en="Where should we meet? *" data-hi="Milna kahan hai? *" data-mr="Bhetaycha kuthe? *">Where should we meet? *</label><input id="meeting" maxlength="200" required placeholder="Enter meeting point / landmark"></div>
+          <div class="field"><label for="pickup">Pickup plan</label><select id="pickup"><option>Let's decide together</option><option>Pick me up</option><option>I'll meet there</option><option>Travel together from a meetup point</option></select></div>
+          <div class="field"><label for="transport">Transport preference</label><select id="transport"><option>Whatever is convenient</option><option>Two-wheeler</option><option>Car / cab</option><option>Public transport</option><option>Walking nearby</option></select></div>
+          <div class="field"><label for="budget">Approx. budget per person</label><select id="budget"><option>Let's decide together</option><option>Under ₹300</option><option>₹300–₹500</option><option>₹500–₹1,000</option><option>₹1,000+</option></select></div>
+          <div class="field full"><label for="extra">Other details</label><textarea id="extra" maxlength="300" placeholder="Movie choice, pickup point, places to visit, or anything else..."></textarea></div>
+        </div>
+      </div>
+      <div class="form-step hidden" data-step="3">
+        <h3>One last little thing.</h3><p class="hint">Anything you'd like me to know before we make this plan happen?</p>
+        <div class="field"><label for="note">Your note</label><textarea id="note" maxlength="500" placeholder="Write anything here..."></textarea></div>
+        <div class="summary" id="summary" style="margin-top:20px"></div>
+        <p class="notice">Sending this shares your proposed plan with the site owner. It is only a suggestion until you both agree on the final details.</p>
+      </div>
+      <div class="form-nav">
+        <button class="btn secondary" type="button" id="backBtn" disabled>← Back</button>
+        <button class="btn" type="button" id="nextBtn">Continue →</button>
+        <button class="btn hidden" type="submit" id="submitBtn">Send my plan ♡</button>
+      </div>
+      <div class="notice" id="connectionNote">Demo preview: Firebase has not been connected yet. Your form will preview locally until the Firebase web configuration is added.</div>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="footer wrap">MADE WITH A LITTLE <span class="heart">♡</span> · JANVI-FRIENDSHIP</footer>
+
+<div class="modal hidden" id="adminModal">
+  <div class="modal-card">
+    <button class="pill" id="closeAdmin" style="float:right">Close ×</button>
+    <div class="eyebrow">Private corner</div><h3>Admin sign in</h3>
+    <p class="hint">Only the site owner can sign in and view submitted plans.</p>
+    <form id="loginForm">
+      <div class="field"><label for="adminEmail">Email</label><input id="adminEmail" type="email" autocomplete="username" required></div>
+      <div class="field" style="margin-top:13px"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required></div>
+      <button class="btn" style="width:100%;margin-top:18px" type="submit">Sign in securely</button>
+    </form>
+    <div id="adminPanel" class="hidden">
+      <p class="status" id="adminStatus"></p><div class="admin-list" id="adminPlans"></div>
+      <button class="btn secondary" id="logoutBtn" style="margin-top:18px">Sign out</button>
+    </div>
+  </div>
+</div>
+<div class="toast hidden" id="toast"></div>
+
+<script type="module">
+/* Firebase web config will be added after registering the web app.
+   Do not put private service-account keys in this public HTML file. */
+const firebaseConfig = {
+  apiKey: "AIzaSyAOMeVZNsBrjH0feScThTc10JNp6d-8Kes",
+  authDomain: "janvi-friendship.firebaseapp.com",
+  projectId: "janvi-friendship",
+  storageBucket: "janvi-friendship.firebasestorage.app",
+  messagingSenderId: "251012434764",
+  appId: "1:251012434764:web:44409231be064764c25de9"
+};
+const configured = Object.values(firebaseConfig).every(v => typeof v === "string" && !v.startsWith("PASTE_"));
+let db, auth, addDoc, collection, serverTimestamp, getDocs, query, orderBy, deleteDoc, firestoreDoc, signInWithEmailAndPassword, signOut, onAuthStateChanged;
+if (configured) {
+  try {
+    const [appMod, dbMod, authMod] = await Promise.all([
+      import("https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"),
+      import("https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js"),
+      import("https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js")
+    ]);
+    const app = appMod.initializeApp(firebaseConfig);
+    db = dbMod.getFirestore(app); auth = authMod.getAuth(app);
+    ({addDoc,collection,serverTimestamp,getDocs,query,orderBy,deleteDoc,doc:firestoreDoc}=dbMod);
+    ({signInWithEmailAndPassword,signOut,onAuthStateChanged}=authMod);
+  } catch(e) { console.error(e); showToast("Firebase could not initialize. Check the web app configuration."); }
+}
+const $ = id => document.getElementById(id);
+let step = 0, activity = "Movie", audioCtx, musicOn = false, musicTimer;
+const steps = [...document.querySelectorAll(".form-step")];
+const dots = [...document.querySelectorAll(".step-dot")];
+const minDate = new Date(); minDate.setMinutes(minDate.getMinutes()-minDate.getTimezoneOffset()); $("date").min = minDate.toISOString().slice(0,10);
+const languageSelect = $("languageSelect");
+const languageCopy = {
+ en: {
+  label:"Choose your language", eyebrow:"A small surprise is waiting", title:"A Little Plan,<br><em>Just for Us.</em>",
+  intro:"Hey, Janvi. Someone has been quietly planning a little adventure. No big clues just yet... only one question.",
+  discover:"Discover your surprise", tiny:"Take your time. This little corner is yours.",
+  noteTitle:"A note for you", dear:"Dear Janvi,", note1:"Some of the best memories begin with a simple idea: let's go somewhere, try something new, and make an ordinary day feel a little special.",
+  note2:"So here's a tiny plan-making corner, made to help us choose a day, pick an adventure, and figure out the little details together.",
+  note3:"Shall we plan something nice?", start:"Let's plan our day ♡",
+  plannerTitle:"Let's make a day of it.", plannerIntro:"Choose what sounds lovely. Nothing is final until we talk it through.",
+  meet:"Where should we meet? *", destination:"Destination / outing place *", submit:"Send my plan ♡"
+ },
+ hi: {
+  label:"Apni language choose karo", eyebrow:"Ek chhota sa surprise tumhara wait kar raha hai", title:"A Little Plan,<br><em>Just for Us.</em>",
+  intro:"Hey Janvi! Kisi ne tumhare liye chupke se ek chhota adventure plan kiya hai. Abhi saare hints nahi milenge... pehle ek chhota surprise.",
+  discover:"Surprise dekho", tiny:"Aaram se explore karo. Ye chhoti si jagah tumhare liye hai.",
+  noteTitle:"Tumhare liye ek chhota note", dear:"Dear Janvi,", note1:"Kuch best memories ek simple idea se shuru hoti hain: kahin chalte hain, kuch naya try karte hain, aur ek normal din ko special banate hain.",
+  note2:"Isliye ye chhota sa planner banaya hai, jahan hum milkar date, adventure aur baaki details decide kar sakte hain.",
+  note3:"Toh kuch achha plan karein?", start:"Chalo apna day plan karein ♡",
+  plannerTitle:"Chalo ek special day plan karein.", plannerIntro:"Jo achha lage woh choose karo. Final plan hum baat karke decide karenge.",
+  meet:"Milna kahan hai? *", destination:"Ghoomne ki jagah / destination *", submit:"Mera plan bhejo ♡"
+ },
+ mr: {
+  label:"Tula havi ti language nivad", eyebrow:"Ek chhota surprise tujhya sathi aahe", title:"A Little Plan,<br><em>Just for Us.</em>",
+  intro:"Hey Janvi! Konitari tujhya sathi ek chhota adventure plan kartay. Sagale hints atta nahi... aadhi ek cute surprise.",
+  discover:"Surprise bagh", tiny:"Aaramat explore kar. Hi chhoti si jagah tujhya sathi aahe.",
+  noteTitle:"Tujhya sathi ek chhoti note", dear:"Dear Janvi,", note1:"Kahi sundar memories eka simple idea pasun suru hotat: kuthetari jau, kahi navin try karu, ani ek normal divas special banavu.",
+  note2:"Mhanun ha chhota planner banavla aahe. Aapan milun date, adventure ani baki details tharavu shakto.",
+  note3:"Mag kahi chhan plan karuya?", start:"Chal, apla day plan karuya ♡",
+  plannerTitle:"Chal ek chhan divas plan karuya.", plannerIntro:"Tula je avadel te choose kar. Final plan aapan bolun tharavu.",
+  meet:"Bhetaycha kuthe? *", destination:"Phiraychi jaga / destination *", submit:"Maza plan pathav ♡"
+ }
+};
+function applyLanguage(lang){
+ const d=languageCopy[lang]||languageCopy.en;
+ const set=(selector,value)=>{const el=$(selector);if(el)el.innerHTML=value};
+ const label=document.querySelector('label[for="languageSelect"]');if(label)label.textContent=d.label;
+ const eyebrow=document.querySelector("#home .eyebrow");if(eyebrow)eyebrow.textContent=d.eyebrow;
+ set("homeTitle",d.title);
+ const heroTitle=document.querySelector("#home h1");if(heroTitle)heroTitle.innerHTML=d.title;
+ const heroP=document.querySelector("#home p");if(heroP)heroP.textContent=d.intro;
+ $("discoverBtn").innerHTML=d.discover+" <span>↗</span>";
+ document.querySelector("#home .tiny").textContent=d.tiny;
+ const letter=document.querySelector("#reveal .letter");
+ if(letter){const nodes=letter.querySelectorAll(".eyebrow,.script,p,.btn");nodes[0].textContent=d.noteTitle;nodes[1].textContent=d.dear;nodes[2].textContent=d.note1;nodes[3].textContent=d.note2;nodes[4].textContent=d.note3;nodes[5].textContent=d.start;}
+ const ph=document.querySelector("#plannerSection .section-head h2");if(ph)ph.textContent=d.plannerTitle;
+ const pi=document.querySelector("#plannerSection .section-head p");if(pi)pi.textContent=d.plannerIntro;
+ const ml=document.querySelector('label[for="meeting"]');if(ml)ml.textContent=d.meet;
+ const dl=document.querySelector('label[for="place"]');if(dl)dl.textContent=d.destination;
+ $("submitBtn").textContent=d.submit;
+}
+languageSelect.addEventListener("change",()=>applyLanguage(languageSelect.value));
+function showToast(msg){const t=$("toast");t.textContent=msg;t.classList.remove("hidden");setTimeout(()=>t.classList.add("hidden"),3800)}
+function showStep(){steps.forEach((el,i)=>el.classList.toggle("hidden",i!==step));dots.forEach((el,i)=>el.classList.toggle("active",i===step));$("backBtn").disabled=step===0;$("nextBtn").classList.toggle("hidden",step===3);$("submitBtn").classList.toggle("hidden",step!==3);if(step===3)buildSummary()}
+function validStep(){const required = step===0?["date","time"]:step===2?["place","meeting"]:[];for(const id of required){const el=$(id);if(!el.value.trim()){el.focus();el.reportValidity();return false}}return true}
+function buildSummary(){const val=id=>$(id).value.trim()||"Not specified";$("summary").innerHTML=`<b>Your little plan</b><br>📅 ${escapeHtml(val("date"))} · ${escapeHtml(val("time"))}<br>✨ ${escapeHtml(activity)}<br>📍 ${escapeHtml(val("place"))}<br>🎟️ Movie / genre: ${escapeHtml(val("movie"))}<br>🍰 Food: ${escapeHtml(val("food"))}<br>🚗 Pickup: ${escapeHtml(val("pickup"))}<br>🚌 Transport: ${escapeHtml(val("transport"))}<br>💗 Budget: ${escapeHtml(val("budget"))}<br><br><b>Extra details</b><br>${escapeHtml(val("extra"))}<br><b>Note</b><br>${escapeHtml(val("note"))}`}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("discoverBtn").addEventListener("click",()=>{$("reveal").classList.remove("hidden");$("reveal").scrollIntoView({behavior:"smooth"})});
+$("startPlan").addEventListener("click",()=>{$("plannerSection").classList.remove("hidden");$("plannerSection").scrollIntoView({behavior:"smooth"})});
+$("nextBtn").addEventListener("click",()=>{if(validStep()){step=Math.min(3,step+1);showStep()}});
+$("backBtn").addEventListener("click",()=>{step=Math.max(0,step-1);showStep()});
+document.querySelectorAll(".choice").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".choice").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");activity=b.dataset.value}));
+$("planForm").addEventListener("submit",async e=>{
+ e.preventDefault();if(!validStep())return;
+ const extraParts=[`Meeting point: ${$("meeting").value}`,`Movie/genre: ${$("movie").value||"Not specified"}`,`Food: ${$("food").value||"Not specified"}`,`Pickup: ${$("pickup").value}`,`Transport: ${$("transport").value}`,`Budget: ${$("budget").value}`, $("extra").value.trim()?`Other details: ${$("extra").value.trim()}`:""].filter(Boolean);
+ const payload={activity,date:$("date").value,time:$("time").value,place:$("place").value.trim(),extra:extraParts.join(" | ").slice(0,300),note:$("note").value.trim(),createdAt:serverTimestamp?serverTimestamp():null};
+ if(configured && db){
+   try{await addDoc(collection(db,"hangoutPlans"),payload);showToast("Your plan has been sent. A little adventure is on its way ♡");}
+   catch(err){console.error(err);showToast("Couldn't send just now. Please try again in a moment.");return;}
+ } else {
+   const local = JSON.parse(localStorage.getItem("janviFriendshipDemoPlans")||"[]");local.push({...payload,createdAt:new Date().toISOString()});localStorage.setItem("janviFriendshipDemoPlans",JSON.stringify(local));
+   showToast("Preview saved on this device only. Firebase connection is still pending.");
+ }
+ $("planForm").reset();activity="Movie";document.querySelectorAll(".choice").forEach(x=>x.classList.toggle("selected",x.dataset.value==="Movie"));step=0;showStep();
+});
+$("adminBtn").addEventListener("click",()=>$("adminModal").classList.remove("hidden"));
+$("closeAdmin").addEventListener("click",()=>$("adminModal").classList.add("hidden"));
+$("adminModal").addEventListener("click",e=>{if(e.target===$("adminModal"))$("adminModal").classList.add("hidden")});
+$("loginForm").addEventListener("submit",async e=>{e.preventDefault();if(!configured||!auth){showToast("Admin login becomes available after Firebase configuration.");return}try{await signInWithEmailAndPassword(auth,$("adminEmail").value,$("adminPassword").value)}catch(err){showToast("Sign-in failed. Check your email and password.")}});
+if(configured && auth){onAuthStateChanged(auth,user=>{$("loginForm").classList.toggle("hidden",!!user);$("adminPanel").classList.toggle("hidden",!user);if(user)loadPlans()})}
+function formatPlanDate(value){
+ if(!value)return "Date not set";
+ const d=new Date(`${value}T12:00:00`);
+ return Number.isNaN(d.getTime())?String(value):new Intl.DateTimeFormat("en-IN",{day:"numeric",month:"short",year:"numeric"}).format(d);
+}
+function formatPlanTime(value){
+ if(!value)return "Time not set";
+ const m=String(value).match(/^(\d{1,2}):(\d{2})$/);
+ if(!m)return String(value);
+ const d=new Date();d.setHours(Number(m[1]),Number(m[2]),0,0);
+ return new Intl.DateTimeFormat("en-IN",{hour:"numeric",minute:"2-digit"}).format(d);
+}
+function parsePlanDetails(raw){
+ const result={meeting:"Not specified",movie:"Not specified",food:"Not specified",pickup:"Not specified",transport:"Not specified",budget:"Not specified",other:""};
+ const keys={"meeting point":"meeting","movie/genre":"movie","food":"food","pickup":"pickup","transport":"transport","budget":"budget","other details":"other"};
+ for(const part of String(raw||"").split(/\s*\|\s*/)){
+   const cut=part.indexOf(":");
+   if(cut<1){if(part.trim())result.other+=(result.other?" | ":"")+part.trim();continue;}
+   const key=part.slice(0,cut).trim().toLowerCase();
+   const val=part.slice(cut+1).trim();
+   if(keys[key])result[keys[key]]=val||"Not specified";
+   else result.other+=(result.other?" | ":"")+part.trim();
+ }
+ return result;
+}
+function makePlanDetail(label,value,full=false){
+ const item=document.createElement("div");item.className="plan-detail"+(full?" full":"");
+ const heading=document.createElement("label");heading.textContent=label;
+ const content=document.createElement("strong");content.textContent=value||"Not specified";
+ item.append(heading,content);return item;
+}
+function loadPlans(){
+ const box=$("adminPlans");box.innerHTML="";$("adminStatus").textContent="Loading submitted plans…";
+ (async()=>{
+ try{
+  const q=query(collection(db,"hangoutPlans"),orderBy("createdAt","desc"));
+  const snap=await getDocs(q);
+  $("adminStatus").textContent=`${snap.size} submitted plan${snap.size===1?"":"s"} · Your private inbox`;
+  if(!snap.size){box.textContent="No plans yet. The first little adventure is still waiting.";return}
+  snap.forEach(doc=>{
+   const p=doc.data(),details=parsePlanDetails(p.extra);
+   const card=document.createElement("article");card.className="plan-card";
+   const head=document.createElement("div");head.className="plan-card-head";
+   const headCopy=document.createElement("div");
+   const kicker=document.createElement("div");kicker.className="plan-kicker";kicker.textContent="HANGOUT PLAN";
+   const title=document.createElement("h4");title.textContent=p.activity||"Outing";
+   const subtitle=document.createElement("div");subtitle.className="plan-sub";subtitle.textContent="A little plan proposal from Janvi";
+   headCopy.append(kicker,title,subtitle);
+   const badge=document.createElement("span");badge.className="plan-badge";badge.textContent="NEW PLAN";
+   head.append(headCopy,badge);
+   const meta=document.createElement("div");meta.className="plan-meta";
+   const dateChip=document.createElement("span");dateChip.className="plan-chip";dateChip.textContent=`📅 ${formatPlanDate(p.date)}`;
+   const timeChip=document.createElement("span");timeChip.className="plan-chip";timeChip.textContent=`🕒 ${formatPlanTime(p.time)}`;
+   meta.append(dateChip,timeChip);
+   const grid=document.createElement("div");grid.className="plan-details";
+   grid.append(
+    makePlanDetail("Destination / outing place",p.place||"Not specified"),
+    makePlanDetail("Meeting point",details.meeting),
+    makePlanDetail("Movie / genre",details.movie),
+    makePlanDetail("Food / snack preference",details.food),
+    makePlanDetail("Pickup plan",details.pickup),
+    makePlanDetail("Transport preference",details.transport),
+    makePlanDetail("Approx. budget per person",details.budget),
+    makePlanDetail("Other details",details.other||"None added",true)
+   );
+   const note=document.createElement("div");note.className="plan-note";
+   const noteLabel=document.createElement("label");noteLabel.textContent="Personal note";
+   const noteText=document.createElement("p");noteText.textContent=p.note||"No extra note was added.";
+   note.append(noteLabel,noteText);
+   card.append(head,meta,grid,note);
+   if(p.createdAt){
+    const submitted=document.createElement("div");submitted.className="plan-submitted";
+    let when="";try{const stamp=typeof p.createdAt.toDate==="function"?p.createdAt.toDate():new Date(p.createdAt);if(!Number.isNaN(stamp.getTime()))when=new Intl.DateTimeFormat("en-IN",{dateStyle:"medium",timeStyle:"short"}).format(stamp)}catch(_){}
+    submitted.textContent=when?`Received ${when}`:"";
+    if(when)card.append(submitted);
+   }
+   const actions=document.createElement("div");actions.className="plan-actions";
+   const remove=document.createElement("button");remove.type="button";remove.className="delete-plan-btn";remove.textContent="Remove submission";
+   remove.addEventListener("click",async()=>{
+    const label=`${p.activity||"this"} plan for ${formatPlanDate(p.date)}`;
+    if(!window.confirm(`Permanently remove ${label}?\n\nThis cannot be undone.`))return;
+    remove.disabled=true;remove.textContent="Removing…";
+    try{
+     await deleteDoc(firestoreDoc(db,"hangoutPlans",doc.id));
+     showToast("Submission removed from your private inbox.");
+     loadPlans();
+    }catch(error){
+     console.error(error);remove.disabled=false;remove.textContent="Remove submission";
+     showToast("Could not remove this plan. Check your Firestore delete rule.");
+    }
+   });
+   actions.append(remove);card.append(actions);
+   box.append(card);
+  });
+ }catch(e){console.error(e);$("adminStatus").textContent="Could not load plans. Check Firestore rules and your admin sign-in."}
+ })();
+}
+$("logoutBtn").addEventListener("click",async()=>{if(auth)await signOut(auth)});
+$("connectionNote").textContent=configured?"Connected to Firebase. Submissions are securely saved online.":"Setup needed: add your Firebase Web App config before publishing. Until then, submissions are saved only in this browser's local preview.";
+// Original synthesized lo-fi ambience. Starts only after the visitor taps Play.
+function startLofi(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){showToast("Audio is not supported in this browser.");return}audioCtx=audioCtx||new AC();audioCtx.resume();const master=audioCtx.createGain();master.gain.value=.12;master.connect(audioCtx.destination);const notes=[261.63,329.63,392,493.88,392,329.63];let idx=0;function chord(){if(!musicOn)return;const now=audioCtx.currentTime;[notes[idx%notes.length],notes[(idx+2)%notes.length],notes[(idx+4)%notes.length]].forEach((f,j)=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=j===0?"sine":"triangle";o.frequency.value=f/2;g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(j===0?.10:.035,now+.35);g.gain.exponentialRampToValueAtTime(.0001,now+2.8);o.connect(g);g.connect(master);o.start(now);o.stop(now+3)});idx++;musicTimer=setTimeout(chord,2600)}chord()}
+$("musicBtn").addEventListener("click",()=>{musicOn=!musicOn;if(musicOn){startLofi();$("musicBtn").textContent="♫ Pause lofi"}else{clearTimeout(musicTimer);if(audioCtx)audioCtx.suspend();$("musicBtn").textContent="♫ Play lofi"}});
+for(let i=0;i<18;i++){const p=document.createElement("i");p.className="petal";p.style.left=Math.random()*100+"%";p.style.animationDuration=(13+Math.random()*18)+"s";p.style.animationDelay=(-Math.random()*25)+"s";p.style.opacity=(.15+Math.random()*.25);$("petals").append(p)}
+showStep(); applyLanguage("en");
+</script>
+</body>
+</html>
